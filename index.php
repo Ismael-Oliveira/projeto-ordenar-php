@@ -13,10 +13,9 @@
 
     if(isset($_GET['ordem']) && !empty($_GET['ordem'])){
         $ordem = addslashes($_GET['ordem']);
-        
+
         if($ordem == "id"){
             $sql = "SELECT * FROM usuarios ORDER BY ".$ordem." DESC";
-            echo $ordem;
         }else{
            $sql = "SELECT * FROM usuarios ORDER BY ".$ordem; 
         }
